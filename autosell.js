@@ -4,7 +4,7 @@
 // @version      2.3
 // @description  Automatically sell crafted items.
 // @author       Groove
-// @match        https://townstar.sandbox-games.com/launch/
+// @match        https://townstar.sandbox-games.com/launch
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
@@ -15,13 +15,41 @@
 	// sellMin is the minimum amount needed before attempting to sell
 	//    setting a sellMin of 100 will ensure that the item is only sold in batches of 100 (e.g. via Freight Ship)
     const craftedItems = [
-        {item: 'Silica', keepAmt: 0, sellMin: 100},
-        {item: 'Pinot_Noir_Grapes', keepAmt: 0, sellMin: 0},
-        {item: 'Feed', keepAmt: 0, sellMin: 0},
-        {item: 'Wheat', keepAmt: 0, sellMin: 0},
-        {item: 'Flour', keepAmt: 0, sellMin: 0},
-        {item: 'Sugar', keepAmt: 0, sellMin: 0},
-        {item: 'Salt', keepAmt: 0, sellMin: 0}
+        // start
+         //{item: 'Pinot_Noir_Grapes', keepAmt: 0, sellMin: 0},
+         //{item: 'Eggs', keepAmt: 0, sellMin: 0},
+         //{item: 'Feed', keepAmt: 0, sellMin: 0},
+         //{item: 'Wheat', keepAmt: 0, sellMin: 0},
+         //{item: 'Wood', keepAmt: 0, sellMin: 0},
+         //{item: 'Water_Drum', keepAmt: 0, sellMin: 0},
+         //{item: 'Energy', keepAmt: 0, sellMin: 0},
+
+        // mid
+        //{item: 'Iron', keepAmt: 0, sellMin: 0},
+        //{item: 'Pinot_Noir_Grapes', keepAmt: 0, sellMin: 0},
+        //{item: 'Silica', keepAmt: 0, sellMin: 0},
+        //{item: 'Lumber', keepAmt: 10, sellMin: 0},
+        //{item: 'Wood', keepAmt: 20, sellMin: 0},
+        //{item: 'Petroleum', keepAmt: 10, sellMin: 0},
+        //{item: 'Gasoline', keepAmt: 10, sellMin: 0},
+        //{item: 'Water_Drum', keepAmt: 10, sellMin: 0},
+
+        // late game
+        {item: 'Pinot_Noir', keepAmt: 0, sellMin: 0},
+        {item: 'Wine_Bottle', keepAmt: 8, sellMin: 0},
+        {item: 'Pinot_Noir_Grapes', keepAmt: 8, sellMin: 0},
+        {item: 'Oak_Barrel', keepAmt: 7, sellMin: 0},
+        {item: 'Iron', keepAmt: 6, sellMin: 0},
+        {item: 'Chromium', keepAmt: 6, sellMin: 0},
+        {item: 'Limestone', keepAmt: 6, sellMin: 0},
+        {item: 'Silica', keepAmt: 6, sellMin: 0},
+        {item: 'Lumber', keepAmt: 25, sellMin: 0},
+        {item: 'Oak_Wood', keepAmt: 12, sellMin: 0},
+        {item: 'Wood', keepAmt: 25, sellMin: 0},
+        {item: 'Petroleum', keepAmt: 7, sellMin: 0},
+        {item: 'Gasoline', keepAmt: 7, sellMin: 0},
+        {item: 'Water_Drum', keepAmt: 10, sellMin: 0},
+        {item: 'Energy', keepAmt: 4, sellMin: 0},
     ]
 
     new MutationObserver(function(mutations) {
